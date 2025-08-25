@@ -15,43 +15,19 @@
         background-position: center;
       }
 
-      .section-box {
-        background: #8E8484;
+      .contact-box {
+        background: black;
         border-radius: 18px;
          box-shadow: 2px 2px 5px #ffa400;
-        padding: 32px 24px;
+        padding: 10px;
         margin: 32px auto;
         max-width: 130vh;
+        max-height: 90vh;
         border: 1px solid #ffa400;
         color: #f4eaea;
+        opacity: 0.78;
       }
-      .sidebar {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 11vw;
-        z-index: 1000;
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        overflow-y: auto;
-        margin: 0;
-      }
-      .welcome {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        padding: 1rem;
-      }
-
-      .container {
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 24px;
-            /* background-color: rgb(142, 132, 132) */
-            /* border-radius: 8px;
-            box-shadow: 2px 2px 5px #ffa400; */
-        }
+    
         form label {
             display: block;
             margin-bottom: 6px;
@@ -79,10 +55,18 @@
             color: #555;
         }
         .contact-info {
-            margin-top: 32px;
+            margin-top: 10px;
             text-align: center;
+            font-size: 0.7em;
+            color: #ffa400;
+        }
+
+        .info {
+           /*  margin-top: 10px; */
+            text-align: left;
+            font-display: auto;
             font-size: 1em;
-            color: #555;
+            color: #ffa400;
         }
 
         .sidebar {
@@ -97,13 +81,20 @@
         overflow-y: auto;
         margin: 0;
       }
+.social {
+  display: flex;
+justify-content: space-around;
+margin: 5% auto auto auto;
+}
 
-      .welcome {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        padding: 1rem;
-      }
+.social a:hover {
+  box-sizing: border-box;
+  border: 2px solid orange;
+  color: #ffa400;
+  
+  
+}
+     
     </style>
 <link
       rel="stylesheet"
@@ -120,25 +111,26 @@
       crossorigin="anonymous"
     />
   </head>
-  <body class="photomaking-page">
+  <body class="contact-page">
     
     
-    <section class="textcontainer section-box">
-        <h2 class="about" id="base">Kapcsolat</h2>
+    <section class="contact-box">
+        <h2 class="about animate__animated animate__fadeInLeft" id="base">Kapcsolat</h2><hr>
         <div class="container">
         
          
         <form>
-            <label for="name">Név</label>
+            <label for="name" class="info">Név:</label>
             <input type="text" id="name" name="name" required>
 
-            <label for="email">Email</label>
+            <label for="email" class="info">E-mail:</label>
             <input type="email" id="email" name="email" required>
 
-            <label for="message">Üzenet</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <label for="message" class="info">Üzenet:</label>
+            <textarea id="message" name="message" rows="5"></textarea>
 
             <button type="submit">Küld</button>
+            <!-- <button type="reset" value="Reset"><a href="index.html">Mégse</a></button> -->
         </form>
 
         
@@ -146,10 +138,12 @@
         <div class="contact-info">
             <p>Email: info@L_photowork2white.com</p>
             <p>Phone: +36 30 (10-1)97 (2*3)6(2+2+2+2)2 </p>
-            <p>Address: Budapest, Hungary</p>
+            <p>Address: Sopron, Hungary</p>
         </div>
-<footer>
-    <div><a href="https://www.facebook.com" target="blank">
+        <hr>
+
+
+    <div class="social"><a href="https://www.facebook.com" target="blank">
           <i class="fa fa-facebook" style="font-size: 40px" title="Facebook"></i
         ></a>
 
@@ -169,8 +163,7 @@
       </section>
 
     <div class="sidebar">
-      <!-- <h3 class="menutext">Menü</h3> -->
-      <nav>
+        <nav>
         <ul>
           <li><a href="index.html" class="animate__animated animate__lightSpeedInRight">Főoldal</a></li>
           <li><a href="galery.html" class="animate__animated animate__lightSpeedInRight">Galéria</a></li>
