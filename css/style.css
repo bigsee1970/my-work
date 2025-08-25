@@ -29,8 +29,7 @@ body {
 /* Csak az index oldalon legyen jobbra a sidebar */
 body.index-page,
 .galery-page,
-.photomaking-page
-.contact-page {
+.photomaking-page {
   grid-template-columns: 1fr 10vw;
   grid-template-areas: "content sidebar";
 }
@@ -49,13 +48,11 @@ body.galery-page .sidebar {
 body.photomaking-page .sidebar {
   border-right: none;
   border-left: 3px solid #ffa400;
-  
 }
 
-body.contact-page .sidebar {
+body .sidebar {
   border-right: none;
   border-left: 3px solid #ffa400;
-  
 }
 
 .sidebar nav ul {
@@ -102,12 +99,11 @@ body.contact-page .sidebar {
   color: white;
 }
 .welcome {
-  /* border-bottom: 1px solid rgb(142, 132, 132); */
+  border-bottom: 1px solid #ffa400;
   text-align: right;
   color: #666;
-  margin: 1%;
+  margin: 0.8% 3% 0.5% 3%;
   padding: 1%;
-  
 }
 
 .textcontainer {
@@ -122,7 +118,7 @@ body.contact-page .sidebar {
   background-color: rgba(0, 0, 0, 0.8);
   /* text-align: center; */
   margin: 20px auto 0 auto;
-  padding: 25px;
+  padding: 2%;
   /*   background-color: #000000; */
 
   opacity: 1;
@@ -227,18 +223,23 @@ body.contact-page .sidebar {
   flex-direction: row;
   align-items: center;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 30vh;
+  width: 11vw;
+  z-index: 1000;
   background: none;
   color: #ffa400;
+  overflow-y: auto;
   margin: 0;
   border-left: 3px solid #ffa400;
 }
-
 
 .powered-by {
   margin: auto;
   /* text-align: center; */
   font-size: 0.9em;
-  
 }
 
 /* Lightbox stílusok */
@@ -389,13 +390,14 @@ body.contact-page .sidebar {
   text-shadow: 2px 2px 2px #ffa400;
 }
 
-*/ .cimfoto {
+ .cimfoto {
   box-sizing: border-box;
+  box-shadow: 0px 4px 24px #ffa400;
   border-radius: 14px;
   display: float;
   margin: 30px;
   float: right;
-  max-height: 200px;
+  max-height: 300px;
   opacity: 0.9;
 }
 
@@ -439,7 +441,6 @@ body.contact-page .sidebar {
 #bookmark a {
   text-decoration: none;
 }
-
 
 #bookm {
   font-size: 1.4em;
