@@ -1,3 +1,12 @@
+/* Centered image style */
+.centered-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px #ffa400;
+  border: 1px solid #ffa400;
+}
 /* Carousel bal oldali box stílus egységesen a contact-box-hoz */
 .carousel-box {
   background: black;
@@ -5,7 +14,7 @@
   box-shadow: 2px 2px 5px #ffa400;
   padding: 20px;
   margin-left: auto;
-  margin-right: 10%;
+  margin-right: auto;
   margin-top: 1.5%;
   width: 35%;
   height: 50%;
