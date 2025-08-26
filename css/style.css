@@ -7,7 +7,8 @@
   margin-left: auto;
   margin-right: 10%;
   margin-top: 1.5%;
-  max-width: 80vh;
+  width: 35%;
+  height: 50%;
   border: 1px solid #ffa400;
   color: #f4eaea;
   font-size: 1em;
@@ -16,13 +17,26 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-sizing: border-box;
 }
-.centered-img {
+
+.carousel-inner img {
+  max-width: 70%;
+  max-height: 320px;
+  height: auto;
+  margin: 0 auto;
   display: block;
+  border-radius: 12px;
+  object-fit: contain;
+  width: 400px;
+  min-width: 400px;
+  max-width: 400px;
+  min-height: 400px;
+  max-height: 400px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 12px;
-  box-shadow: 2px 2px 5px #ffa400;
+  /* box-shadow: 2px 2px 5px #ffa400; */
 }
 
 #advice {

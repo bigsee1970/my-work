@@ -41,12 +41,12 @@
         background: black;
         border-radius: 18px;
         box-shadow: 2px 2px 5px #ffa400;
-        padding: 20px;
-        margin-left: auto;
+        padding: 15px;
+        margin-left: 0;
         margin-right: 10%;
-        margin-top: 1.5%;
-        max-width: 80vh;
-        max-height: auto;
+        margin-top: 0;
+        max-width: 100vw;
+        max-height: 100vh;
         border: 1px solid #ffa400;
         color: #f4eaea;
         font-size: 1em;
@@ -148,7 +148,7 @@
         height: auto;
         margin: 0 auto;
         display: block;
-        border-radius: 12px;
+        border-radius: 8px;
       }
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -179,81 +179,77 @@
       <div class="contact-layout">
         <div class="carousel-box">
           <div
-            id="carouselExampleIndicators"
-            class="carousel slide"
+            id="carouselExample"
+            class="carousel slide carousel-fade"
+            data-bs-ride="carousel"
+            data-bs-interval="5000"
             style="
-              background: rgba(
-                0,
-                0,
-                0,
-                0.7
-              ); /* border-radius:18px;box-shadow:2px 2px 5px #ffa400; */
+              background: rgba(0, 0, 0, 0.7);
               padding: 24px;
               min-width: 320px;
-              max-width: 350px;
+              max-width: 50vh;
               display: flex;
               align-items: center;
               justify-content: center;
               flex-direction: column;
             "
           >
-            <div class="carousel-indicators">
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                class="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button>
-            </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="bw/p/chill.jpg" alt="" />
               </div>
               <div class="carousel-item">
-                <img src="bw/s/1669209460889.jpg" alt="" />
+                <img src="bw/s/glass.jpg" alt="" />
               </div>
               <div class="carousel-item">
                 <img src="bw/l/boss.jpg" alt="" />
               </div>
+              <div class="carousel-item">
+                <img src="bw/p/columns.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/s/cat.jpeg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/l/glasses.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/p/smog.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/s/flower.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/l/boss.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/p/windows.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/s/leaf.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/l/port.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/p/winter.jpeg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/s/lock.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/l/train.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/p/wood.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/s/paw.jpg" alt="" />
+              </div>
+              <div class="carousel-item">
+                <img src="bw/l/volt.jpg" alt="" />
+              </div>
             </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
 
@@ -316,8 +312,8 @@
             <div class="map-container">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d21488.114167967644!2d16.58355634462893!3d47.684142808249526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1shu!2shu!4v1756190027722!5m2!1shu!2shu"
-                width="500"
-                height="200"
+                width="100%"
+                height="auto"
                 style="
                   border: 3px solid #ffa400;
                   border-radius: 4px;
@@ -370,44 +366,35 @@
         </ul>
       </nav>
     </div>
-
-    <!-- Bootstrap JavaScript -->
-    <!-- <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script> -->
-
-    <!-- Modal a <body> végén -->
-    <!-- <div
-      class="modal fade"
-      id="cimfotoModal"
-      tabindex="-1"
-      aria-labelledby="cimfotoModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content bg-dark">
-          <div class="modal-header border-0">
-            <h5 class="modal-title text-light" id="cimfotoModalLabel">
-              Fotós barátom, bronzból - Pozsonyban
-            </h5>
-            <button
-              type="button"
-              class="btn-close btn-close-white ms-auto"
-              data-bs-dismiss="modal"
-              aria-label="Bezárás"
-            ></button>
-          </div>
-          <div class="modal-body text-center">
-            <img
-              src="bw/s/S20230908_202353-01_1000.jpeg"
-              alt="Én és a Bronzfotós - Pozsony"
-              class="img-fluid rounded shadow"
-            />
-          </div>
-        </div>
+    <div class="footer" style="display: block">
+      <div class="add">
+        <p class="animate__animated animate__bounceInUp">Ha tetszett az oldal, jelezd:</p>
       </div>
-    </div> -->
+      <div style="display: block">
+        <button onclick="like()">👍 Lájk!</button>
+        <span id="szamlalo" style="display: block">0</span> ember lájkolta az
+        oldalt
+
+        <script>
+          let szam = localStorage.getItem("likeSzamlalo");
+
+          if (szam === null) {
+            szam = 0;
+          } else {
+            szam = parseInt(szam);
+          }
+
+          document.getElementById("szamlalo").innerText = szam;
+
+          function like() {
+            szam++;
+            document.getElementById("szamlalo").innerText = szam;
+
+            localStorage.setItem("likeSzamlalo", szam);
+          }
+        </script>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
