@@ -7,6 +7,8 @@
       name="description"
       content="Minden, amit én látok a fotózásban, röviden, tömören, lényegre törően"
     />
+    <meta name="keywords" content="photo, composition, jpeg, DSLR, pictures" />
+    <meta name="author" content="bigsee1970" />
     <title>Lévai Photo</title>
     <!-- Bootstrap CSS -->
     <link
@@ -36,15 +38,30 @@
         overflow-y: auto;
         margin: 0;
       }
+      .contact-layout {
+        display: flex;
+        flex-direction: row;
+
+        gap: 32px;
+        align-items: center; /* függőlegesen középre */
+        justify-content: center;
+
+        min-height: 85%; /* teljes magasság */
+        max-width: 90%;
+      }
 
       .contact-box {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
         background: black;
         border-radius: 18px;
         box-shadow: 2px 2px 5px #ffa400;
-        padding: 15px;
+        padding: 35px;
         margin-left: 0;
-        margin-right: 10%;
-        margin-top: 0;
+        margin-right: 5%;
+        margin-top: 1%;
         max-width: 100vw;
         max-height: 100vh;
         border: 1px solid #ffa400;
@@ -87,7 +104,7 @@
         text-align: center;
         font-size: 0.9em;
         color: #ffa400;
-        font-style: italic;
+        /* font-style: italic; */
       }
       .social {
         display: flex;
@@ -113,6 +130,7 @@
       .mapsocial {
         display: flex;
         justify-content: space-around;
+        gap: 25px;
       }
 
       .phone {
@@ -121,17 +139,14 @@
         font-style: normal;
         color: #ffa400;
       }
-
-      .contact-layout {
-        display: flex;
-        flex-direction: row;
-        gap: 32px;
-        align-items: center; /* függőlegesen középre */
-        justify-content: flex-end;
-        min-height: 85%; /* teljes magasság */
+       .carousel-inner {
+        height: 320px;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
       }
 
-      .carousel-inner img {
+       .carousel-inner img {
         max-width: 70%;
         height: auto;
         margin: 0 auto;
@@ -139,16 +154,17 @@
         border-radius: 12px;
       }
 
+      
       .textcontainer.section-box {
         flex: 1;
         margin-left: auto;
       }
-      .carousel-inner img {
-        max-width: 70%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-        border-radius: 8px;
+
+      .animate__animated.animate__fadeInLeft {
+        --animate-duration: 2s;
+      }
+      .animate__animated.animate__lightSpeedInRight {
+        --animate-duration: 2s;
       }
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -170,6 +186,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    
   </head>
   <body class="index-page">
     <div class="main-content">
@@ -368,11 +385,14 @@
     </div>
     <div class="footer" style="display: block">
       <div class="add">
-        <p class="animate__animated animate__bounceInUp">Ha tetszett az oldal, jelezd:</p>
+        <p class="animate__animated animate__heartBeat">
+          Ha tetszett az oldal, jelezd:
+        </p>
       </div>
       <div style="display: block">
         <button onclick="like()">👍 Lájk!</button>
-        <span id="szamlalo" style="display: block">0</span> lájkszámláló
+        <span id="szamlalo" style="display: block">0</span> lájkszámoló
+        
 
         <script>
           let szam = localStorage.getItem("likeSzamlalo");
