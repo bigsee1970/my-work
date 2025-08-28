@@ -48,6 +48,7 @@
 }
 
 #advice {
+  flex-direction: column;
   font-size: 1em;
   font-style: italic;
   color: #da9413;
@@ -133,8 +134,8 @@ body .sidebar {
 }
 
 .about {
+  display: flex;
   text-align: center;
-
   color: white;
 }
 .welcome {
@@ -235,7 +236,7 @@ body .sidebar {
   display: flex;
   flex-direction: row;
   align-items: center;
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -392,7 +393,7 @@ body .sidebar {
   display: float;
   margin: 30px;
   float: right;
-  max-height: 300px;
+  max-height: 55%;
   opacity: 0.9;
 }
 
@@ -423,26 +424,28 @@ body .sidebar {
 }
 
 .footnote {
-  /* display: flex;
-  justify-content: center; */
-  font-size: 0.7em;
+  box-sizing: border-box;
+  
+  width: 80%;
+  font-size: 0.9em;
   color: #aaa;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.7);
   border-left: 1px solid #ffa400;
 
-  padding: 6px 12px;
-  margin: 12px;
+  padding: 12px 12px;
+  margin: auto;
   font-style: italic;
   border-radius: 6px;
 }
 #fnote {
-  display: flex;
-  justify-content: center;
-  font-size: 0.55em;
-  border-left: 1px solid #ffa400;
-  border-right: 1px solid #ffa400;
-  margin: 2% 5% 2% 5%;
-}
+ /*  display: flex;
+  
+  /* justify-content: center; */
+  font-size: 1em;
+  /* border-left: 1px solid #ffa400;
+  border-right: 1px solid #ffa400; */
+  /* margin: 2% 5% 2% 5%;
+ */} */
 
 #bookmark a {
   text-decoration: none;
