@@ -45,10 +45,11 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 12px;
-  /* box-shadow: 2px 2px 5px #ffa400; */
 }
 
 #advice {
+  font-size: 1em;
+  font-style: italic;
   color: #da9413;
 }
 
@@ -124,7 +125,7 @@ body .sidebar {
   color: rgb(142, 132, 132);
   text-decoration: none;
   list-style: none;
-  margin: 12%;
+  margin: 0;
 }
 
 .main-content {
@@ -140,7 +141,7 @@ body .sidebar {
   border-bottom: 1px solid #ffa400;
   text-align: right;
   color: #666;
-  margin: 0.8% 3% 0.5% 3%;
+  margin: 0.8% 3% 0.5% 4%;
   padding: 1%;
 }
 
@@ -149,12 +150,12 @@ body .sidebar {
   font-size: 1.5em;
   box-sizing: border-box;
   border-radius: 18px;
-  box-shadow: 0 4px 24px #ffa400;
+  box-shadow: 2px 2px 6px #ffa400;
   border: 1px solid rgb(142, 132, 132);
   max-width: 130vh;
   color: rgb(244, 234, 234);
   background-color: rgba(0, 0, 0, 0.8);
-  margin: 3% auto 0 auto;
+  margin: 3% auto 3% auto;
   padding: 2.5%;
   opacity: 1;
 }
@@ -234,6 +235,7 @@ body .sidebar {
   display: flex;
   flex-direction: row;
   align-items: center;
+  font-size: 0.7em;
   text-align: center;
   position: fixed;
   bottom: 0;
@@ -306,7 +308,7 @@ body .sidebar {
 
 .close:hover,
 .close:focus {
-  color: orange;
+  color: #ffa400;
   text-decoration: none;
 }
 
@@ -385,7 +387,7 @@ body .sidebar {
 
 .cimfoto {
   box-sizing: border-box;
-  box-shadow: 0px 4px 24px #ffa400;
+  box-shadow: 4px 4px 10px #ffa400;
   border-radius: 14px;
   display: float;
   margin: 30px;
@@ -421,14 +423,25 @@ body .sidebar {
 }
 
 .footnote {
-  font-size: 0.75em;
+  /* display: flex;
+  justify-content: center; */
+  font-size: 0.5em;
   color: #aaa;
   background: rgba(0, 0, 0, 0.05);
-  border-left: 3px solid #ffa400;
+  border-left: 1px solid #ffa400;
+
   padding: 6px 12px;
-  margin: 12px 0;
+  margin: 12px;
   font-style: italic;
   border-radius: 6px;
+}
+#fnote {
+  display: flex;
+  justify-content: center;
+  font-size: 0.55em;
+  border-left: 1px solid #ffa400;
+  border-right: 1px solid #ffa400;
+  margin: 2% 5% 2% 5%;
 }
 
 #bookmark a {
@@ -437,4 +450,22 @@ body .sidebar {
 
 #bookm {
   font-size: 1.4em;
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+    width: 100vw;
+    position: static;
+    height: auto;
+  }
+  .main-content {
+    margin-right: 0;
+  }
+  .section-box {
+    padding: 10px;
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
 }
