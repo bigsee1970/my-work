@@ -54,6 +54,11 @@
         z-index: 999;
         padding: 1rem;
       }
+#tartalom {
+  color: #ffa400;}
+
+  .textcontainer .section-box{
+  box-shadow: 2px 2px 6px #ffa400;}
 
       .animate__animated.animate__fadeInLeft {
         --animate-duration: 2s;
@@ -93,7 +98,12 @@
   <body class="photomaking-page">
     <div class="main-content">
       <div class="welcome">
-        <h1 class="animate__animated animate__fadeInLeft">Photo-zás</h1>
+        <h1
+          class="animate__animated animate__fadeInRight"
+          style="text-align: left"
+        >
+          Photo-zás
+        </h1>
       </div>
       <section class="textcontainer section-box">
         <h2 class="about" id="base">A fényképezés alapjai</h2>
@@ -542,7 +552,7 @@
       <hr />
 
       <nav class="bookmarks">
-        <h3 class="animate__animated animate__swing">Tartalom</h3>
+        <h3 class="animate__animated animate__swing" id="tartalom">Tartalom</h3>
         <ul>
           <li><a href="#base" id="bookm">Alapok</a></li>
           <li><a href="#tech" id="bookm">Technikai alapfogalmak</a></li>
