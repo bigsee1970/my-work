@@ -398,8 +398,8 @@ body .sidebar {
 
 .hy {
   display: flex;
-  align-items: center; /* függőlegesen középre igazítja a szöveget a kép mellett */
-  gap: 20px; /* távolság a kép és szöveg között */
+  align-items: center;
+  gap: 20px;
 }
 
 .gitqr {
@@ -425,7 +425,7 @@ body .sidebar {
 .footnote {
   /* display: flex;
   justify-content: center; */
-  font-size: 0.5em;
+  font-size: 0.7em;
   color: #aaa;
   background: rgba(0, 0, 0, 0.05);
   border-left: 1px solid #ffa400;
@@ -452,7 +452,7 @@ body .sidebar {
   font-size: 1.4em;
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .sidebar {
     width: 100vw;
     position: static;
@@ -469,3 +469,4 @@ body .sidebar {
     height: auto;
   }
 }
+ */
