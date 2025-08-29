@@ -19,48 +19,72 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-      .section-box {
-        background: rgba(0, 0, 0, 0.85);
-        border-radius: 18px;
-        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
-        padding: 32px 24px;
-        margin: 32px auto;
-        max-width: 130vh;
-        border: 1px solid #ffa400;
-        color: #f4eaea;
-      }
-      body {
-        background-image: url("bw/free-photo-of-camera-lens-in-black-background1280.jpg");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-        background-position: center;
-      }
-      .sidebar {
-        position: fixed;
-        top: 0;
-        right: 0;
-        height: 100vh;
-        width: 11vw;
-        z-index: 1000;
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        overflow-y: auto;
-        margin: 0;
-      }
-      .welcome {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-        padding: 1rem;
-      }
-#tartalom {
-  color: #ffa400;}
+      @media screen and (max-width: 991px) {
 
-  .textcontainer .section-box{
-  box-shadow: 2px 2px 6px #ffa400;}
+        body {
+          background-image: none !important;
+          background-color: rgb(142, 132, 132) !important;
+        }
 
-      
+        .welcome {
+          margin: 0;
+          text-align: center;
+
+          font-size: 1.3em;
+          
+          max-width: 100vw;
+
+          color: rgb(81, 81, 81);
+          text-shadow: 2px 2px 2px #ffa400;
+        }
+
+              .textcontainer section-box {
+                display: grid;
+                max-width: 50vh;
+              }
+
+            }
+
+            .section-box {
+              background: rgba(0, 0, 0, 0.85);
+              border-radius: 18px;
+              box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+              padding: 32px 24px;
+              margin: 32px auto;
+              max-width: 130vh;
+              border: 1px solid #ffa400;
+              color: #f4eaea;
+            }
+            body {
+              background-image: url("bw/free-photo-of-camera-lens-in-black-background1280.jpg");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+              background-position: center;
+            }
+            .sidebar {
+              position: fixed;
+              top: 0;
+              right: 0;
+              height: 100vh;
+              width: 11vw;
+              z-index: 1000;
+              background: rgba(0, 0, 0, 0.7);
+              color: #fff;
+              overflow-y: auto;
+              margin: 0;
+            }
+            .welcome {
+              position: sticky;
+              top: 0;
+              z-index: 999;
+              padding: 1rem;
+            }
+      #tartalom {
+        color: #ffa400;}
+
+        .textcontainer .section-box{
+        box-shadow: 2px 2px 6px #ffa400;}
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -480,38 +504,35 @@
         </h2>
       </section>
 
-      
-        <div class="footnote" id="note">
-          <p>Lábjegyzet:</p>
-          <p>
-            1/ F-szám (blendeérték) Az F-szám a fényképezőgép rekeszének
-            nyílását jelenti, és fordítottan arányos a gyújtótávolsággal. Egy
-            alacsony F-szám (pl. f/1.4) nagy rekesznyílást jelent, míg egy magas
-            F-szám (pl. f/16) kis rekesznyílást jelöl. Ezek a számok
-            befolyásolják a kép mélységélességét és a kép elkészültéhez
-            szükséges fény mennyiségét.
-          </p>
+      <div class="footnote" id="note">
+        <p>Lábjegyzet:</p>
+        <p>
+          1/ F-szám (blendeérték) Az F-szám a fényképezőgép rekeszének nyílását
+          jelenti, és fordítottan arányos a gyújtótávolsággal. Egy alacsony
+          F-szám (pl. f/1.4) nagy rekesznyílást jelent, míg egy magas F-szám
+          (pl. f/16) kis rekesznyílást jelöl. Ezek a számok befolyásolják a kép
+          mélységélességét és a kép elkészültéhez szükséges fény mennyiségét.
+        </p>
 
-          <p>
-            2/ A fotózásban a színhőmérséklet (Kelvinben, K-ban mérve) a fény
-            színét jelenti, ami befolyásolja a kép hangulatát és a színek
-            valósághűségét. A magasabb Kelvin érték kékebb fényt, míg az
-            alacsonyabb érték sárgásabb fényt jelent. A különböző
-            fényforrásoknak eltérő színhőmérsékletük van (pl. a napfény 5600 K,
-            a gyertyák 1000 K), ezért a fotósnak be kell állítania a
-            fehéregyensúlyt, hogy a kép színei természetesek maradjanak.
-          </p>
+        <p>
+          2/ A fotózásban a színhőmérséklet (Kelvinben, K-ban mérve) a fény
+          színét jelenti, ami befolyásolja a kép hangulatát és a színek
+          valósághűségét. A magasabb Kelvin érték kékebb fényt, míg az
+          alacsonyabb érték sárgásabb fényt jelent. A különböző fényforrásoknak
+          eltérő színhőmérsékletük van (pl. a napfény 5600 K, a gyertyák 1000
+          K), ezért a fotósnak be kell állítania a fehéregyensúlyt, hogy a kép
+          színei természetesek maradjanak.
+        </p>
 
-          <p>
-            3/ A tripod - ahogy a neve is mutatja - háromlábú állvány, amely
-            stabilitást ad. A monopod "egylábú", kisebb helyen elfér, könnyebb
-            kezelni, cipelni, de kevésbé stabil. A "zsinórállvány" egy, a
-            fényképezőgép állványcsatkozójába illő csavarral a váz alsó részére
-            erősített zsinőr, amelyre rálépve és a zsinórt megfeszítve stabilan
-            meg tudjuk tartani a képrögzítő eszközt.
-          </p>
-        </div>
-      
+        <p>
+          3/ A tripod - ahogy a neve is mutatja - háromlábú állvány, amely
+          stabilitást ad. A monopod "egylábú", kisebb helyen elfér, könnyebb
+          kezelni, cipelni, de kevésbé stabil. A "zsinórállvány" egy, a
+          fényképezőgép állványcsatkozójába illő csavarral a váz alsó részére
+          erősített zsinőr, amelyre rálépve és a zsinórt megfeszítve stabilan
+          meg tudjuk tartani a képrögzítő eszközt.
+        </p>
+      </div>
     </div>
 
     <div class="sidebar">
