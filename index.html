@@ -23,19 +23,25 @@
         .footerM {
           display: flex !important;
           flex-direction: column;
-          
+
           /* position: fixed; */
           /* left: 0; */
           /* bottom: 0; */
           width: 100%;
           border-radius: 8px;
           margin: 5px 5px 5px 5px;
-          
+
           z-index: 3000;
           opacity: 0.6;
           background-color: rgb(142, 132, 132);
-
         }
+
+        #powered_byM {
+          height: auto;
+          width: 75%;
+          align-items: center;
+        }
+
         .main-content,
         .textcontainer,
         .textcontainer p,
@@ -70,17 +76,10 @@
           width: 100vw;
           max-width: 100vw;
 
-          color: #ffa400;
-          text-shadow: 2px 2px 2px white;
+          color: rgb(81, 81, 81);
+          text-shadow: 2px 2px 2px #ffa400;
         }
-        .navbar {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          z-index: 2000;
-          border-radius: 0;
-        }
+
         .main-content {
           margin-top: 0;
         }
@@ -97,23 +96,12 @@
           max-height: 300px;
         }
 
-        .navbar {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          z-index: 2000;
-          border-radius: 0;
-        }
-
         .one {
           display: flex;
           flex-direction: column-reverse;
         }
         /* Mbilszekció vége!!! */
-           
       }
-
 
       body {
         background-image: url("bw/free-photo-of-camera-lens-in-black-background_1920.png");
@@ -147,9 +135,6 @@
       .one {
         justify-content: space-evenly;
       }
-
-      
-        
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -176,9 +161,124 @@
       <div class="welcome">
         <h1 class="animate__animated animate__fadeInLeft">Photo-zgatok</h1>
       </div>
+      
+      <!-- Mobilos hamburger menü az oldal tetején -->
+      <nav
+        class="navbarM d-lg-none"
+        style="
+          width: 50vw;
+          background: rgb(142, 132, 132);
+
+          position: sticky;
+          top: 0;
+          z-index: 4000;
+        "
+      >
+        <div
+          style="
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.5em 1em;
+          "
+        >
+          <span style="font-weight: bold; color: #ffa400">Menü</span>
+          <button
+            id="hamburgerBtn"
+            style="
+              background: none;
+              border: none;
+              font-size: 2em;
+              cursor: pointer;
+            "
+          >
+            &#9776;
+          </button>
+        </div>
+        <div
+          id="mobileMenu"
+          style="
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 56px;
+            display: none;
+            align-items: center;
+          "
+        >
+          <a
+            href="galery.html"
+            class="menu-link"
+            style="
+              margin: 0 1em;
+              color: #333;
+              text-decoration: none;
+              transform: translateX(-100vw);
+              opacity: 0;
+              transition: transform 0.3s, opacity 0.3s;
+            "
+            >Galéria</a
+          >
+          <a
+            href="photomaking.html"
+            class="menu-link"
+            style="
+              margin: 0 1em;
+              color: #333;
+              text-decoration: none;
+              transform: translateX(-100vw);
+              opacity: 0;
+              transition: transform 0.3s, opacity 0.3s;
+            "
+            >Fotózás</a
+          >
+          <a
+            href="contact.html"
+            class="menu-link"
+            style="
+              margin: 0 1em;
+              color: #333;
+              text-decoration: none;
+              transform: translateX(-100vw);
+              opacity: 0;
+              transition: transform 0.3s, opacity 0.3s;
+            "
+            >Kontakt</a
+          >
+        </div>
+      </nav>
+      <script>
+        const hamburgerBtn = document.getElementById("hamburgerBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const menuLinks = document.querySelectorAll(".menu-link");
+        if (hamburgerBtn && mobileMenu) {
+          let menuOpen = false;
+          hamburgerBtn.addEventListener("click", function () {
+            menuOpen = !menuOpen;
+            if (menuOpen) {
+              mobileMenu.style.display = "flex";
+              menuLinks.forEach((link, i) => {
+                setTimeout(() => {
+                  link.style.transform = "translateX(0)";
+                  link.style.opacity = "1";
+                }, i * 100);
+              });
+            } else {
+              menuLinks.forEach((link, i) => {
+                setTimeout(() => {
+                  link.style.transform = "translateX(-100vw)";
+                  link.style.opacity = "0";
+                }, i * 100);
+              });
+              setTimeout(() => {
+                mobileMenu.style.display = "none";
+              }, menuLinks.length * 100 + 300);
+            }
+          });
+        }
+      </script>
 
       <section class="textcontainer section-box">
-        <!-- Kép és szöveg egymás mellett, középre igazítva -->
         <div class="one d-flex align-items-center my-4">
           <img
             src="bw/S20230908_202353-01_500.png"
@@ -228,27 +328,28 @@
         </div>
 
         <div class="footerM">
-      <footerM>
-        <p class="spanM">&copy; 2025 - levaikaroly - Minden jog fenntartva!</p>
+          <footerM>
+            <p class="spanM">
+              &copy; 2025 - levaikaroly - Minden jog fenntartva!
+            </p>
 
-        <div id="powered_byM">
-          <p>Inspired & Powered by</p>
+            <div id="powered_byM">
+              <p>Inspired & Powered by</p>
 
-          <a
-            href="http://www.prooktatas.hu/"
-            target="_blank"
-            class="animate__animated animate__flash animate__repeat -2"
-          >
-            <img
-              style="height: auto; width: 75%; cursor: pointer"
-              src="bw/pro.png"
-            />
-          </a>
+              <a
+                href="http://www.prooktatas.hu/"
+                target="_blank"
+                class="animate__animated animate__flash animate__repeat -2"
+              >
+                <img
+                  style="height: auto; width: 75%; cursor: pointer"
+                  src="bw/pro.png"
+                />
+              </a>
+            </div>
+          </footerM>
         </div>
-      </footerM>
-    </div>
       </section>
-      
     </div>
 
     <div class="sidebar">
@@ -298,7 +399,6 @@
         </div>
       </footer>
     </div>
-    
 
     <!-- Bootstrap JavaScript -->
     <script
