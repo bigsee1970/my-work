@@ -441,6 +441,9 @@
         caption.textContent = images[currentSlide].caption;
         lightbox.style.display = "block";
 
+        // Animáció eltávolítása, hogy ne csússzon balra
+        img.classList.remove("animate__animated", "animate__fadeInLeft");
+
         // 4 másodperc múlva automatikus slideshow indítása
         setTimeout(() => {
           startSlideshow();
@@ -479,6 +482,9 @@
 
         img.src = images[currentSlide].src;
         caption.textContent = images[currentSlide].caption;
+
+        // Animáció eltávolítása, hogy ne csússzon balra
+        img.classList.remove("animate__animated", "animate__fadeInLeft");
 
         // Újraindítjuk a slideshow-t 4 másodperc múlva
         setTimeout(() => {
