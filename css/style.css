@@ -319,11 +319,36 @@ body .sidebar {
   width: 90%;
   max-width: 1200px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
+
+@media screen and (max-width: 991px) {
+  .galery .portrait,
+  .galery .square,
+  .galery .landscape {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    justify-items: center;
+    align-items: start;
+  }
+  .galery a.portrait,
+  .galery a.square,
+  .galery a.landscape {
+    width: 100%;
+    max-width: 98vw;
+    height: auto;
+    margin: 0;
+    border-radius: 8px;
+  }
+  .galery a img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+}
+ 
+
 
 .lightbox-content img {
   max-width: 100%;
