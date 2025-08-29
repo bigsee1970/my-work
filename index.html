@@ -59,6 +59,7 @@
         }
 
         .textcontainer {
+          margin-top: 0;
           margin-bottom: 0;
           padding: 8%;
           /* background-color: white !important; */
@@ -100,8 +101,34 @@
           display: flex;
           flex-direction: column-reverse;
         }
-        /* Mbilszekció vége!!! */
-      }
+
+        .navbarM {
+          display: flex;
+          /* flex-direction: row; */
+          justify-content: center;
+          align-items: center;
+          gap: 1em;
+        }
+        .navbarM a {
+          display: inline-block;
+          margin: 0 0.5em;
+        }
+
+        .navbarM nav ul {
+          list-style: none;
+          text-decoration: none;
+        }
+
+        .navbarM nav a {
+          color: #ffa400;
+          text-decoration: none;
+          font-size: 1em;
+          /* display: block; */
+          padding: 10px;
+          border-radius: 4px;
+          transition: background-color 0.3s;
+        }
+      } /* Mbilszekció vége!!! */
 
       body {
         background-image: url("bw/free-photo-of-camera-lens-in-black-background_1920.png");
@@ -161,122 +188,38 @@
       <div class="welcome">
         <h1 class="animate__animated animate__fadeInLeft">Photo-zgatok</h1>
       </div>
-      
-      <!-- Mobilos hamburger menü az oldal tetején -->
-      <nav
-        class="navbarM d-lg-none"
-        style="
-          width: 50vw;
-          background: rgb(142, 132, 132);
 
-          position: sticky;
-          top: 0;
-          z-index: 4000;
-        "
-      >
-        <div
-          style="
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0.5em 1em;
-          "
-        >
-          <span style="font-weight: bold; color: #ffa400">Menü</span>
-          <button
-            id="hamburgerBtn"
-            style="
-              background: none;
-              border: none;
-              font-size: 2em;
-              cursor: pointer;
-            "
-          >
-            &#9776;
-          </button>
-        </div>
-        <div
-          id="mobileMenu"
-          style="
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 56px;
-            display: none;
-            align-items: center;
-          "
-        >
-          <a
-            href="galery.html"
-            class="menu-link"
-            style="
-              margin: 0 1em;
-              color: #333;
-              text-decoration: none;
-              transform: translateX(-100vw);
-              opacity: 0;
-              transition: transform 0.3s, opacity 0.3s;
-            "
-            >Galéria</a
-          >
-          <a
-            href="photomaking.html"
-            class="menu-link"
-            style="
-              margin: 0 1em;
-              color: #333;
-              text-decoration: none;
-              transform: translateX(-100vw);
-              opacity: 0;
-              transition: transform 0.3s, opacity 0.3s;
-            "
-            >Fotózás</a
-          >
-          <a
-            href="contact.html"
-            class="menu-link"
-            style="
-              margin: 0 1em;
-              color: #333;
-              text-decoration: none;
-              transform: translateX(-100vw);
-              opacity: 0;
-              transition: transform 0.3s, opacity 0.3s;
-            "
-            >Kontakt</a
-          >
-        </div>
-      </nav>
-      <script>
-        const hamburgerBtn = document.getElementById("hamburgerBtn");
-        const mobileMenu = document.getElementById("mobileMenu");
-        const menuLinks = document.querySelectorAll(".menu-link");
-        if (hamburgerBtn && mobileMenu) {
-          let menuOpen = false;
-          hamburgerBtn.addEventListener("click", function () {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-              mobileMenu.style.display = "flex";
-              menuLinks.forEach((link, i) => {
-                setTimeout(() => {
-                  link.style.transform = "translateX(0)";
-                  link.style.opacity = "1";
-                }, i * 100);
-              });
-            } else {
-              menuLinks.forEach((link, i) => {
-                setTimeout(() => {
-                  link.style.transform = "translateX(-100vw)";
-                  link.style.opacity = "0";
-                }, i * 100);
-              });
-              setTimeout(() => {
-                mobileMenu.style.display = "none";
-              }, menuLinks.length * 100 + 300);
-            }
-          });
-        }
-      </script>
+      <div class="navbarM">
+        <nav>
+          <ul>
+            <div>
+              <li>
+                <a href="galery.html">Galéria</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+
+        <nav>
+          <ul>
+            <div>
+              <li>
+                <a href="photomaking.html">Fotózás</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+
+        <nav>
+          <ul>
+            <div>
+              <li>
+                <a href="contact.html">Kontakt</a>
+              </li>
+            </div>
+          </ul>
+        </nav>
+      </div>
 
       <section class="textcontainer section-box">
         <div class="one d-flex align-items-center my-4">
