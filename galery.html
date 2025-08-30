@@ -22,6 +22,31 @@
     <style>
 
       @media screen and (max-width: 991px) {
+        /* Lightbox nyilak alulra mobil nézetben */
+        .lightbox-content {
+          position: relative;
+        }
+        .lightbox .prev, .lightbox .next {
+          position: absolute;
+          left: 25%;
+          right: 25%;
+          bottom: 10px;
+          top: auto;
+          width: 20%;
+          height: 40px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10;
+        }
+        .lightbox .prev {
+          left: 10%;
+          right: auto;
+        }
+        .lightbox .next {
+          right: 10%;
+          left: auto;
+        }
 
         body {
           background-image: none !important;
@@ -182,52 +207,52 @@
 
       <div class="galery">
         <div class="portrait">
-          <a href="BW/P/columns.jpg" class="portrait">
+          <a href="bw/P/columns.jpg" class="portrait">
             <img
-              src="BW/P/columns.jpg"
+              src="bw/P/columns.jpg"
               alt="Oszlopok"
               loading="lazy"
               title="Oszlopok"
             />
           </a>
-          <a href="BW/P/windows.jpg" class="portrait">
+          <a href="bw/P/windows.jpg" class="portrait">
             <img
-              src="BW/P/windows.jpg"
+              src="bw/P/windows.jpg"
               alt="Ablakban"
               loading="lazy"
               title="Ablakban"
             />
           </a>
 
-          <a href="BW/P/wood.jpg" class="portrait">
+          <a href="bw/P/wood.jpg" class="portrait">
             <img
-              src="BW/P/wood.jpg"
+              src="bw/P/wood.jpg"
               alt="Fa és hold"
               loading="lazy"
               title="Fa és hold"
             />
 </a>
 
-<a href="BW/P/smog.jpg" class="portrait">
+<a href="bw/P/smog.jpg" class="portrait">
             <img
-              src="BW/P/smog.jpg"
+              src="bw/P/smog.jpg"
               alt="Ködben"
               loading="lazy"
               title="Ködben"
             />
 </a>
 
-<a href="BW/P/chill.jpg" class="portrait">
+<a href="bw/P/chill.jpg" class="portrait">
             <img
-              src="BW/P/chill.jpg"
+              src="bw/P/chill.jpg"
               alt="Csendes napnyugta"
               loading="lazy"
               title="Csendes napnyugta"
             />
           </a>
-            <a href="BW/P/winter.jpeg" class="portrait">
+            <a href="bw/P/winter.jpeg" class="portrait">
             <img
-              src="BW/P/winter.jpeg"
+              src="bw/P/winter.jpeg"
               alt="Télárnyék"
               loading="lazy"
               title="Télárnyék"
@@ -238,49 +263,49 @@
         </div>
 
         <div class="square">
-          <a href="BW/S/glass.jpg "class="square">
+          <a href="bw/S/glass.jpg "class="square">
             <img
-              src="BW/S/glass.jpg"
+              src="bw/S/glass.jpg"
               alt="Üvegek"
               loading="lazy"
               title="Üvegek"
             />
           </a>
-          <a href="BW/S/paw.jpg" class="square">
+          <a href="bw/S/paw.jpg" class="square">
             <img
-              src="BW/S/paw.jpg"
+              src="bw/S/paw.jpg"
               alt="Mancs"
               loading="lazy"
               title="Mancs"
             />
           </a>
 
-          <a href="BW/S/cat.jpeg" class="square">
+          <a href="bw/S/cat.jpeg" class="square">
             <img
-              src="BW/S/cat.jpeg"
+              src="bw/S/cat.jpeg"
               alt="Macska"
               loading="lazy"
               title="Virágom"
             />
           </a>
-          <a href="BW/S/flower.jpg" class="square">
+          <a href="bw/S/flower.jpg" class="square">
             <img
-              src="BW/S/flower.jpg"
+              src="bw/S/flower.jpg"
               alt="Virágom"
               loading="lazy"
               title="Virágom"
             />
-             <a href="BW/S/lock.jpg" class="square">
+             <a href="bw/S/lock.jpg" class="square">
             <img
-              src="BW/S/lock.jpg"
+              src="bw/S/lock.jpg"
               alt="Forever"
               loading="lazy"
               title="Forever"
             />
           </a>
-          <a href="BW/S/leaf.jpg" class="square">
+          <a href="bw/S/leaf.jpg" class="square">
             <img
-              src="BW/S/leaf.jpg"
+              src="bw/S/leaf.jpg"
               alt="Leveled jött!"
               loading="lazy"
               title="Leveled jött!"
@@ -290,24 +315,24 @@
         </div>
 
         <div class="landscape">
-          <a href="BW/L/volt.jpg" class="landscape">
+          <a href="bw/L/volt.jpg" class="landscape">
             <img
-              src="BW/L/volt.jpg"
+              src="bw/L/volt.jpg"
               alt="Feszültség"
               loading="lazy"
               title="Feszültség"
             />
           </a>
-          <a href="BW/L/level.jpg" class="landscape">
+          <a href="bw/L/level.jpg" class="landscape">
             <img
-              src="BW/L/level.jpg"
+              src="bw/L/level.jpg"
               alt="Vízállás"
               loading="lazy"
               title="Vízállás"
             />
-<a href="BW/L/glasses.jpg" class="landscape">
+<a href="bw/L/glasses.jpg" class="landscape">
             <img
-              src="BW/L/glasses.jpg"
+              src="bw/L/glasses.jpg"
               alt="Borok"
               loading="lazy"
               title="Borosüvegek"
@@ -316,26 +341,26 @@
 
           </a>
           
-          <a href="BW/L/port.jpg" class="landscape">
+          <a href="bw/L/port.jpg" class="landscape">
             <img
-              src="BW/L/port.jpg"
+              src="bw/L/port.jpg"
               alt="Kikötő"
               loading="lazy"
               title="Kikötő"
             />
           </a>
-          <a href="BW/L/boss.jpg" class="landscape">
+          <a href="bw/L/boss.jpg" class="landscape">
             <img
-              src="BW/L/boss.jpg"
+              src="bw/L/boss.jpg"
               alt="A főnök"
               loading="lazy"
               title="A főnök"
             />
           </a>
 
-          <a href="BW/L/train.jpg" class="landscape">
+          <a href="bw/L/train.jpg" class="landscape">
             <img
-              src="BW/L/train.jpg"
+              src="bw/L/train.jpg"
               alt="Úton"
               loading="lazy"
               title="Úton"
