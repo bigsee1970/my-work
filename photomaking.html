@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="css/style.css" />
     <style>
       @media screen and (max-width: 991px) {
-
         .sidebar {
           display: none;
         }
@@ -38,7 +37,7 @@
           text-shadow: 2px 2px 2px #ffa400;
         }
 
-        .textcontainer  {
+        .textcontainer {
           display: grid;
           max-width: 50vh;
         }
@@ -77,7 +76,39 @@
           border-radius: 4px;
           transition: background-color 0.3s;
         }
-      }
+
+        .bookmarksM {
+          display: inline;
+          text-align: center;
+          font-size: 0.7em;
+          color: rgb(142, 132, 132);
+          text-decoration: none;
+          list-style: none;
+          margin: 0;
+        }
+
+        .footerM {
+          display: flex !important;
+          flex-direction: column;
+
+          /* position: fixed; */
+          /* left: 0; */
+          /* bottom: 0; */
+          width: 100%;
+          border-radius: 8px;
+          margin: 5px 5px 5px 5px;
+
+          z-index: 3000;
+          opacity: 0.6;
+          background-color: rgb(142, 132, 132);
+        }
+
+        #powered_byM {
+          height: auto;
+          width: 75%;
+          align-items: center;
+        }
+      } /* Mbilszekció vége!!! */
 
       .section-box {
         background: rgba(0, 0, 0, 0.85);
@@ -188,6 +219,28 @@
           </ul>
         </nav>
       </div>
+
+      <nav class="bookmarksM">
+        <select name="list" id="list" onchange="jumpToSection(this.value)">
+          <option value="">Tartalom</option>
+          <option value="base">Alapok</option>
+          <option value="comp">Kompozíció</option>
+          <option value="light">Fények - arany óra és kék óra</option>
+          <option value="stab">Stabilizálás</option>
+          <option value="practice">Gyakorlati tippek</option>
+          <option value="digit">Digitális utómunka</option>
+          <option value="advice">Jó tanács!</option>
+        </select>
+        <script>
+          function jumpToSection(id) {
+            if (!id) return;
+            var el = document.getElementById(id);
+            if (el) {
+              el.scrollIntoView({ behavior: "smooth" });
+            }
+          }
+        </script>
+      </nav>
       <section class="textcontainer section-box">
         <h2 class="about" id="base">A fényképezés alapjai</h2>
         <hr />
@@ -600,6 +653,29 @@
           meg tudjuk tartani a képrögzítő eszközt.
         </p>
       </div>
+
+      <div class="footerM">
+          <footerM>
+            <p class="spanM">
+              &copy; 2025 - levaikaroly - Minden jog fenntartva!
+            </p>
+
+            <div id="powered_byM">
+              <p>Inspired & Powered by</p>
+
+              <a
+                href="http://www.prooktatas.hu/"
+                target="_blank"
+                class="animate__animated animate__flash animate__repeat -2"
+              >
+                <img
+                  style="height: auto; width: 75%; cursor: pointer"
+                  src="bw/pro.png"
+                />
+              </a>
+            </div>
+          </footerM>
+        </div>
     </div>
 
     <div class="sidebar">
