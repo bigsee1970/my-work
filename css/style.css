@@ -1,4 +1,15 @@
 @media screen and (max-width: 991px) {
+  body {
+    display: block !important;
+    grid-template-columns: none !important;
+    grid-template-areas: none !important;
+    min-width: 100vw !important;
+    width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
   #mobileMenu {
     width: 100%;
     left: 0;
@@ -34,6 +45,30 @@
     padding: 1em !important;
     box-sizing: border-box;
   }
+  .bookmarksM {
+    display: block !important;
+    margin: 2vw auto !important;
+    background: rgba(142, 132, 132, 0.95);
+    color: #ffa400 !important;
+    border-radius: 16px;
+    padding: 1em 0.5em;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    width: 90vw;
+    max-width: 95vw;
+  }
+  .bookmarksM select {
+    width: 80vw;
+    max-width: 90vw;
+    font-size: 1.1em;
+    margin: 0.5em auto;
+    display: block;
+    background: #fff8e1;
+    color: #333;
+    border-radius: 8px;
+    border: 1px solid #ffa400;
+    padding: 0.5em;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -54,6 +89,9 @@
   }
 }
 
+.bookmarksM {
+  display: none;
+}
 .footerM {
   display: none !important;
 }
@@ -484,7 +522,6 @@ body .sidebar {
   margin: 30px;
   float: right;
   max-height: 65%;
-  
 }
 
 .hy {
