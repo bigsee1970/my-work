@@ -118,7 +118,7 @@
   height: 50%;
   border: 1px solid #ffa400;
   color: #f4eaea;
-  
+
   opacity: 0.78;
   display: flex;
   align-items: center;
@@ -159,7 +159,6 @@
 }
 a {
   text-decoration: none !important;
-
 }
 body {
   display: grid;
@@ -593,4 +592,3 @@ body .sidebar {
 .add {
   color: #ffa400;
 }
-
