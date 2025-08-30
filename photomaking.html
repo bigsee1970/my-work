@@ -135,10 +135,13 @@
         background-position: center;
       }
       .sidebar {
+        display: flex;
+  flex-direction: column;
+  
         position: fixed;
         top: 0;
         right: 0;
-        height: 100vh;
+        height: 200vh;
         width: 11vw;
         z-index: 1000;
         background: rgba(0, 0, 0, 0.7);
@@ -146,6 +149,14 @@
         overflow-y: auto;
         margin: 0;
       }
+
+      .footr {
+        font-size: 0.8em;
+  text-align: center;
+  color: #ffa400;
+  padding: 5%;
+  margin-bottom: 10%;
+}
       .welcome {
         position: sticky;
         top: 0;
@@ -189,6 +200,7 @@
     crossorigin="anonymous"
   ></script>
   <body class="photomaking-page">
+    
     <div class="main-content">
       <div class="welcome">
         <h1 class="animate__animated animate__fadeInRight">Photo-zás</h1>
@@ -725,7 +737,29 @@
           <li><a href="#advice" id="bookm">Jó tanács!</a></li>
         </ul>
       </nav>
+      
+    
+    <hr>
+      <footer class="footr">
+        <p><span>&copy; 2025 - levaikaroly - Minden jog fenntartva!</span></p>
+
+        <div id="powered_by">
+          <p>Inspired & Powered by</p>
+
+          <a
+            href="http://www.prooktatas.hu/"
+            target="_blank"
+            <!-- class="animate__animated animate__flash animate__repeat -2" -->
+          
+            <img
+              style="height: auto; width: 75%; cursor: pointer"
+              src="bw/pro.png"
+            />
+          </a>
+        </div>
+      </footer>
     </div>
+    
 
     <!-- Bootstrap JavaScript -->
     <script
@@ -733,5 +767,6 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    
   </body>
 </html>
