@@ -18,6 +18,22 @@
   .about {
     font-size: 3em;
   }
+  .textcontainer {
+    max-width: none !important;
+    width: 98vw !important;
+    font-size: 1em !important;
+    margin: 2vw auto !important;
+    padding: 1em !important;
+    box-sizing: border-box;
+  }
+  .section-box {
+    max-width: none !important;
+    width: 98vw !important;
+    font-size: 1em !important;
+    margin: 2vw auto !important;
+    padding: 1em !important;
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (max-width: 991px) {
@@ -467,8 +483,8 @@ body .sidebar {
   display: float;
   margin: 30px;
   float: right;
-  max-height: 55%;
-  opacity: 0.9;
+  max-height: 65%;
+  
 }
 
 .hy {
