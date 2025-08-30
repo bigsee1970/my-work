@@ -160,7 +160,40 @@
         margin-left: auto;
       }
 
-      
+      .likes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        gap: 10px;
+      }
+      .like-btn {
+        background: #fff;
+        color: #ffa400;
+        border: 2px solid #ffa400;
+        border-radius: 30px;
+        padding: 10px 24px;
+        font-size: 1.2em;
+        cursor: pointer;
+        transition: background 0.2s, color 0.2s, transform 0.1s;
+        box-shadow: 0 2px 8px #ffa400;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .like-btn:hover {
+        background: #ffa400;
+        color: #fff;
+        transform: scale(1.08);
+      }
+      #szamlalo {
+        margin: 15px;
+        text-align: center;
+        font-size: 1.3em;
+        font-weight: bold;
+        color: #ffa400;
+        letter-spacing: 2px;
+      }
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -377,38 +410,55 @@
           </li>
         </ul>
       </nav>
-    </div>
-    <div class="footer" style="display: block">
+      <div class="likes">
       <div class="add">
-        <p class="animate__animated animate__heartBeat">
-          Ha tetszett az oldal, jelezd:
-        </p>
+        <p >Ha tetszett az oldal...</p>
       </div>
-      <div style="display: block">
-        <button onclick="like()">👍 Lájk!</button>
-        <span id="szamlalo" style="display: block">0</span> lájkszámoló
-        
-
+      <!-- Csak a böngészőben tárolja a like-okat! -->
+      <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <button class="like-btn animate__animated animate__swing" onclick="like()">
+          <span style="font-size:1.4em;">👍</span> Lájk!
+        </button>
+        <span id="szamlalo">0</span>
         <script>
           let szam = localStorage.getItem("likeSzamlalo");
-
           if (szam === null) {
             szam = 0;
           } else {
             szam = parseInt(szam);
           }
-
           document.getElementById("szamlalo").innerText = szam;
-
           function like() {
             szam++;
             document.getElementById("szamlalo").innerText = szam;
-
             localStorage.setItem("likeSzamlalo", szam);
           }
         </script>
       </div>
+      </div>
+      <div class="footer">
+      <footer>
+        <p><span>&copy; 2025 - levaikaroly - Minden jog fenntartva!</span></p>
+
+        <div id="powered_by">
+          <p>Inspired & Powered by</p>
+
+          <a
+            href="http://www.prooktatas.hu/"
+            target="_blank"
+            class="animate__animated animate__flash animate__repeat -2"
+          >
+            <img
+              style="height: auto; width: 75%; cursor: pointer"
+              src="bw/pro.png"
+            />
+          </a>
+        </div>
+      </footer>
     </div>
+    </div>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
