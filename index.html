@@ -20,6 +20,17 @@
     <link rel="stylesheet" href="css/style.css" />
     <style>
       @media screen and (max-width: 991px) {
+        /* Mobilnézetben ne legyen sticky a .welcome */
+        .welcome {
+          position: static !important;
+          top: auto !important;
+          z-index: auto !important;
+        }
+        .welcome {
+          position: static !important;
+          top: auto !important;
+          z-index: auto !important;
+        }
         .footerM {
           display: flex !important;
           flex-direction: column;
@@ -58,11 +69,11 @@
           background-color: rgb(142, 132, 132) !important;
         }
 
-        .textcontainer {
-          margin-top: 0;
-          margin-bottom: 0;
+        .textcontainer section-box {
+          margin: 0 !important;
+          
           padding: 8%;
-          /* background-color: white !important; */
+          
         }
 
         .sidebar {
@@ -153,10 +164,10 @@
         margin-right: 20px;
       }
       .welcome {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
       }
 
       .one {

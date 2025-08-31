@@ -19,8 +19,20 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <style>
-
       @media screen and (max-width: 991px) {
+        
+        /* .welcome {
+          position: static !important;
+          top: auto !important;
+          z-index: auto !important;
+        } */
+        .contact-box {
+          margin-right: 0 !important;
+        }
+        body {
+          background-image: none !important;
+          background-color: rgb(142, 132, 132) !important;
+        }
         .contact-box {
           max-height: none !important;
           min-height: 80vh !important;
@@ -29,34 +41,33 @@
         .contact-layout {
           flex-direction: column !important;
           align-items: stretch !important;
+          align-content: center;
           max-width: 100vw !important;
           overflow-x: hidden !important;
           padding: 0 8px !important;
+
           box-sizing: border-box;
         }
-
-        body {
-          background-image: none !important;
-          background-color: rgb(142, 132, 132) !important;
+        
+        .sidebar {
+          display: none;
         }
-.sidebar {
-  display: none;
-}
 
-.carousel-box {
-  display: none;
-}
+        .carousel-box {
+          display: none;
+        }
 
-.welcome {
+        .welcome {
           margin: 0;
           text-align: center;
-
           font-size: 1.3em;
           width: 100vw;
           max-width: 100vw;
-
           color: rgb(81, 81, 81);
           text-shadow: 2px 2px 2px #ffa400;
+          position: static !important;
+          top: auto !important;
+          z-index: auto !important;
         }
 
         .main-content {
@@ -64,14 +75,11 @@
           flex-direction: column;
         }
 
-.footerM {
+        .footerM {
           display: flex !important;
           justify-content: space-between;
           flex-wrap: nowrap;
-          
 
-
-          
           width: 100%;
           border-radius: 8px;
           margin: 5px 5px 5px 5px;
@@ -80,13 +88,15 @@
           opacity: 0.6;
           background-color: rgb(142, 132, 132);
         }
-.navbarM {
+        .navbarM {
           display: flex;
           /* flex-direction: row; */
-          justify-content: center;
+          width: 85vw;
+          /* justify-content: center; */
           align-items: center;
-          gap: 1em;
+          /* gap: 1em; */
         }
+
         .navbarM a {
           display: inline-block;
           margin: 0 0.5em;
@@ -106,12 +116,6 @@
           border-radius: 4px;
           transition: background-color 0.3s;
         }
-
-
-
-
-
-
       }
       body {
         background-image: url("bw/free-photo-of-camera-lens-in-black-background_1920.png");
@@ -236,14 +240,14 @@
         font-style: normal;
         color: #ffa400;
       }
-       .carousel-inner {
+      .carousel-inner {
         height: 320px;
         /* display: flex;
         align-items: center;
         justify-content: center; */
       }
 
-       .carousel-inner img {
+      .carousel-inner img {
         max-width: 70%;
         height: auto;
         margin: 0 auto;
@@ -251,7 +255,6 @@
         border-radius: 12px;
       }
 
-      
       .textcontainer.section-box {
         flex: 1;
         margin-left: auto;
@@ -291,10 +294,9 @@
         color: #ffa400;
         letter-spacing: 2px;
       }
-.contact-box h3 {
-  text-align: center;
-}
-      
+      .contact-box h3 {
+        text-align: center;
+      }
     </style>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -315,7 +317,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    
   </head>
   <body class="index-page">
     <div class="main-content">
@@ -434,7 +435,6 @@
           <h3 class="text-align=center">Kapcsolat</h3>
 
           <form>
-            
             <label for="name" class="info">Név:</label>
             <input
               type="text"
@@ -515,32 +515,30 @@
             >
             <p>Address: Sopron, Hungary</p>
           </div>
-          
         </section>
-        
       </div>
       <div class="footerM">
-          <footerM>
-            <p class="spanM">
-              &copy; 2025 - levaikaroly - Minden jog fenntartva!
-            </p>
+        <footerM>
+          <p class="spanM">
+            &copy; 2025 - levaikaroly - Minden jog fenntartva!
+          </p>
 
-            <div id="powered_byM">
-              <p>Inspired & Powered by</p>
+          <div id="powered_byM">
+            <p>Inspired & Powered by</p>
 
-              <a
-                href="http://www.prooktatas.hu/"
-                target="_blank"
-                class="animate__animated animate__flash animate__repeat -2"
-              >
-                <img
-                  style="height: auto; width: 75%; cursor: pointer"
-                  src="bw/pro.png"
-                />
-              </a>
-            </div>
-          </footerM>
-        </div>
+            <a
+              href="http://www.prooktatas.hu/"
+              target="_blank"
+              class="animate__animated animate__flash animate__repeat -2"
+            >
+              <img
+                style="height: auto; width: 75%; cursor: pointer"
+                src="bw/pro.png"
+              />
+            </a>
+          </div>
+        </footerM>
+      </div>
     </div>
 
     <div class="sidebar">
@@ -570,54 +568,63 @@
         </ul>
       </nav>
       <div class="likes">
-      <div class="add">
-        <p >Ha tetszett az oldal...</p>
-      </div>
-      <!-- Csak a böngészőben tárolja a like-okat! -->
-      <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
-        <button class="like-btn animate__animated animate__swing" onclick="like()">
-          <span style="font-size:1.4em;">👍</span> Lájk!
-        </button>
-        <span id="szamlalo">0</span>
-        <script>
-          let szam = localStorage.getItem("likeSzamlalo");
-          if (szam === null) {
-            szam = 0;
-          } else {
-            szam = parseInt(szam);
-          }
-          document.getElementById("szamlalo").innerText = szam;
-          function like() {
-            szam++;
+        <div class="add">
+          <p>Ha tetszett az oldal...</p>
+        </div>
+        <!-- Csak a böngészőben tárolja a like-okat! -->
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+          "
+        >
+          <button
+            class="like-btn animate__animated animate__swing"
+            onclick="like()"
+          >
+            <span style="font-size: 1.4em">👍</span> Lájk!
+          </button>
+          <span id="szamlalo">0</span>
+          <script>
+            let szam = localStorage.getItem("likeSzamlalo");
+            if (szam === null) {
+              szam = 0;
+            } else {
+              szam = parseInt(szam);
+            }
             document.getElementById("szamlalo").innerText = szam;
-            localStorage.setItem("likeSzamlalo", szam);
-          }
-        </script>
-      </div>
+            function like() {
+              szam++;
+              document.getElementById("szamlalo").innerText = szam;
+              localStorage.setItem("likeSzamlalo", szam);
+            }
+          </script>
+        </div>
       </div>
       <div class="footer">
-      <footer>
-        <p><span>&copy; 2025 - levaikaroly - Minden jog fenntartva!</span></p>
+        <footer>
+          <p><span>&copy; 2025 - levaikaroly - Minden jog fenntartva!</span></p>
 
-        <div id="powered_by">
-          <p>Inspired & Powered by</p>
+          <div id="powered_by">
+            <p>Inspired & Powered by</p>
 
-          <a
-            href="http://www.prooktatas.hu/"
-            target="_blank"
-            class="animate__animated animate__flash animate__repeat -2"
-          >
-            <img
-              style="height: auto; width: 75%; cursor: pointer"
-              src="bw/pro.png"
-            />
-          </a>
-        </div>
-      </footer>
+            <a
+              href="http://www.prooktatas.hu/"
+              target="_blank"
+              class="animate__animated animate__flash animate__repeat -2"
+            >
+              <img
+                style="height: auto; width: 75%; cursor: pointer"
+                src="bw/pro.png"
+              />
+            </a>
+          </div>
+        </footer>
+      </div>
     </div>
-    </div>
-    
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
