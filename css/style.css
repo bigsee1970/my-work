@@ -87,6 +87,11 @@
     font-size: 0.7em;
     color: #f9f3e7;
   }
+}/* Mobilszekció vége! */
+
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 2s;
 }
 
 .bookmarksM {
