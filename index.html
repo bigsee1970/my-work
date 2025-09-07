@@ -20,14 +20,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <style>
       @media screen and (min-width: 769px) and (max-width: 992px) {
-  /* Itt állítsd be a képek, konténerek, grid/flexbox méreteit, elrendezését */
-
-
-
-
-
-}
-
+        /* Itt állítsd be a képek, konténerek, grid/flexbox méreteit, elrendezését */
+      }
 
       @media screen and (max-width: 991px) {
         /* Mobilnézetben ne legyen sticky a .welcome */
@@ -40,7 +34,6 @@
           display: flex !important;
           flex-direction: column;
 
-          
           width: 100%;
           border-radius: 8px;
           margin: 5px 5px 5px 5px;
@@ -74,9 +67,8 @@
 
         .textcontainer section-box {
           margin: 0 !important;
-          
+
           padding: 8%;
-          
         }
 
         .sidebar {
@@ -118,7 +110,7 @@
 
         .navbarM {
           display: flex;
-          
+
           justify-content: center;
           align-items: center;
           gap: 1em;
@@ -163,14 +155,14 @@
         overflow-y: auto;
         margin: 0;
       }
-      .main-content {
+      /* .main-content {
         margin-right: 20px;
-      }
+      } */
       .welcome {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        padding: 1rem;
       }
 
       .one {
@@ -200,7 +192,9 @@
   <body class="index-page">
     <div class="main-content">
       <div class="welcome">
-        <h1 class="animate__animated animate__fadeInLeft animate__delay-1s">Photo-zgatok</h1>
+        <h1 class="animate__animated animate__fadeInLeft animate__delay-1s">
+          Photo-zgatok
+        </h1>
       </div>
 
       <div class="navbarM">
@@ -246,7 +240,9 @@
             data-bs-toggle="modal"
             data-bs-target="#cimfotoModal"
           />
-          <h2 class="about mb-0 animate__animated animate__jackInTheBox animate__delay-1s">
+          <h2
+            class="about mb-0 animate__animated animate__jackInTheBox animate__delay-1s"
+          >
             Üdvözöllek az oldalamon!
           </h2>
         </div>

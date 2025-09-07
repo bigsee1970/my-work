@@ -21,10 +21,18 @@
         <style>
 
       @media screen and (max-width: 991px) {
+
         .welcome {
           position: static !important;
           top: auto !important;
           z-index: auto !important;
+          margin: 0;
+          text-align: center;
+          font-size: 1.3em;
+          width: 100%;
+          /* max-width: 100vw; */
+          color: rgb(81, 81, 81);
+          text-shadow: 2px 2px 2px #ffa400;
         }
         /* Lightbox nyilak alulra mobil nézetben */
         .lightbox-content {
@@ -41,49 +49,33 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          z-index: /* 10 */auto;
+          z-index: 10;
         }
         .lightbox .prev {
-          left: 20%;
+          left: 10%;
           right: auto;
         }
         .lightbox .next {
-          right: 20%;
+          right: 10%;
           left: auto;
         }
-
         body {
           background-image: none !important;
           background-color: rgb(142, 132, 132) !important;
         }
-
-        .welcome {
-          margin: 0;
-          text-align: center;
-
-          font-size: 1.3em;
-          width: 100vw;
-          max-width: 100vw;
-
-          color: rgb(81, 81, 81);
-          text-shadow: 2px 2px 2px #ffa400;
-        }
         .sidebar {
           display: none;
         }
-.galery {
-  width: 100vw;
-  
-}
+        .galery {
+          width: 100vw;
+        }
 
 .footerM {
           display: flex !important;
           flex-direction: column;
 
-          /* position: fixed; */
-          /* left: 0; */
-          /* bottom: 0; */
           width: 100%;
+          border: 1px solid rgb(0, 0, 64);
           border-radius: 8px;
           margin: 5px 5px 5px 5px;
 
@@ -100,7 +92,7 @@
 
 .navbarM {
           display: flex;
-          /* flex-direction: row; */
+          flex-direction: row;
           justify-content: center;
           align-items: center;
           gap: 1em;
@@ -116,7 +108,8 @@
         }
 
         .navbarM nav a {
-          color: #ffa400;
+          color: rgb(0, 0, 64);
+          text-shadow: 5px 5px 10px #ffa400;
           text-decoration: none;
           font-size: 1em;
           /* display: block; */
@@ -175,7 +168,7 @@
   <body class="galery-page">
     
 
-    <div class="main-content">
+  <div class="main-content">
       <div class="welcome"><h1 class="animate__animated animate__fadeInLeft animate__delay-1s">Photo-im</h1></div>
       <div class="navbarM">
         <nav>
